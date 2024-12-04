@@ -1,0 +1,185 @@
+:root {
+  --v-theme-gradientBgOrange: #ff5500;
+  --v-theme-gradientBgRed: #ff0055;
+  --v-theme-gradientBgBlue: #0055ff;
+  --v-theme-gradientBgGreen: #00ffd4;
+  --baseCol: #3f1bc2;
+  --accentCol: #ff1919;
+  --backgroundCol: #15141a;
+  --surfaceCol: #201f26;
+  --surface-contrast-plusCol: #2b2a33;
+  --content: #dcdae5;
+}
+
+/* Bg gradient */
+@keyframes gradient-bg-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.login-pf body {
+  background-image: linear-gradient(
+    -45deg,
+    var(--v-theme-gradientBgOrange),
+    var(--v-theme-gradientBgRed),
+    var(--v-theme-gradientBgBlue),
+    var(--v-theme-gradientBgGreen)
+  ) !important;
+  background-size: 500% 500% !important;
+  animation: gradient-bg-animation 15s ease infinite !important;
+  z-index: 0;
+  font-size: 18px;
+  font-family: "Open Sans" !important;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.pattern {
+  background-image: url("hex.svg");
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.custom-blur {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Login Card */
+.login-pf-page {
+  color: var(--content) !important;
+  font-size: 18px;
+  font-family: "Open Sans";
+  background-image: url("hex.svg");
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.login-pf-page .card-pf {
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 15px 15px 30px var(--baseCol), -15px -15px 30px var(--baseCol);
+}
+
+/* Card Title */
+
+.login-pf-page .login-pf-header {
+  margin-bottom: 50px;
+}
+
+#kc-page-title {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Login Form */
+
+.login-pf-page .form-group {
+  margin-bottom: 30px;
+}
+
+.login-pf-page .form-control {
+  border: none;
+  padding: 22px 30px;
+  font-size: 18px;
+  color: var(--content) !important;
+  height: auto;
+
+  border-radius: 32px;
+  background: var(--baseColor);
+  box-shadow: inset 15px 15px 30px var(--baseCol),
+    inset -15px -15px 30px var(--baseCol);
+}
+
+.login-pf-page .form-control::placeholder {
+  font-style: normal;
+  color: var(--content) !important;
+}
+
+/* Remember Me Toggle */
+
+#kc-form-options .checkbox {
+  font-size: 16px;
+  color: var(--content) !important;
+  margin-bottom: 0;
+}
+
+#kc-form-options label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 8px;
+}
+
+#kc-form-options .toggle {
+  isolation: isolate;
+  position: relative;
+  height: 30px;
+  width: 60px;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+#rememberMe {
+  display: none;
+}
+
+#kc-form-options .dot {
+  height: 100%;
+  width: 200%;
+  background: var(--baseCol);
+  border-radius: 15px;
+  transform: translate3d(-75%, 0, 0);
+  transition: transform 0.4s cubic-bezier(0.85, 0.05, 0.18, 1.35);
+}
+
+#rememberMe:checked ~ .dot {
+  transform: translate3d(25%, 0, 0);
+}
+
+#kc-form-options .label-text {
+  margin-left: 16px;
+}
+
+/* Reset Password Link */
+
+#kc-form-reset-psw a {
+  font-size: 16px;
+  color: var(--content) !important;
+  padding-right: 8px;
+}
+
+#kc-form-buttons {
+  margin-top: 50px;
+}
+
+/* Login Button */
+
+#kc-login {
+  border: none;
+  padding: 22px 30px;
+  font-size: 18px;
+  color: var(--content) !important;
+  background: var(--surface-contrast-plusCol) !important;
+  border-radius: 32px;
+}

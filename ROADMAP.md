@@ -1,0 +1,13 @@
+- Review project components to ensure naming consistency and code maintainability, then publish them.
+- Remove the private backup containers repository and publish containers to DockerHub.
+- Export Keycloak with the custom theme to a common repository.
+- Add instructions for deploying it using a simple docker-compose setup with the --scale feature.
+- Add OpenTofu infrastructure configuration.
+- Integrate with Confizard for easier deployment and provide quick setup instructions.
+- Add authentication integration with GitLab to fetch user roles based on repository permissions.
+- Enable indexing of commit messages.
+- Implement functionality to save search settings, such as index patterns and instant search preferences.
+- Add internationalization (i18n) support.
+- Fine-tune indexes generation and query optimization.
+- Enable selective updates (update indexes based on modifications and new commits, avoiding full reindexing).
+- Enable auto-indexing (integrate with GitLab for automatic indexing in response to repository changes via pipelines).
